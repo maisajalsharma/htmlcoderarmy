@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Development Course – Lecture 1 Notes</title>
+</head>
+<body>
+
+  <header align="center">
+    <h1>🌐 Web Development Course – Lecture 1 🌐</h1>
+    <h3>✨ Topic: How the Internet Works ✨</h3>
+    <p><strong>Clear & concise notes with video + diagrams</strong></p>
+    <hr>
+  </header>
+
+  
+  <section align="center">
+    <h2> Lecture Video</h2>
+    <iframe src="https://www.youtube.com/embed/1pcikNlDB-4" width="560" height="315" frameborder="1" allowfullscreen></iframe>
+    <p><a href="#notes">Go to Notes</a></p>
+    <hr>
+  </section>
+
+  <nav align="center">
+    <h2>Quick Revision</h2>
+    <p>
+      <a href="#principles">Core Principles</a> |
+      <a href="#ip">IP Addresses</a> |
+      <a href="#packets">Packets</a> |
+      <a href="#mac">MAC</a> |
+      <a href="#ports">Ports</a> |
+      <a href="#dns">DNS</a> |
+      <a href="#tldr">Summary</a>
+    </p>
+    <hr>
+  </nav>
+
+  <main id="notes">
+
+    <section id="principles">
+      <h2>1. Core Principles (Problem → Solution)</h2>
+      <ol>
+        <li>Need to share info:Computers exchange data with signals (1s &amp; 0s).</li>
+        <li>Problem of scale: Can’t connect every machine directly → use a <em>Switch</em> (LAN).</li>
+        <li>Connecting networks: LANs connect with <em>Routers</em> → many routers = Internet.</li>
+        <li>Addressing: Every device has a unique <em>IP Address</em>.</li>
+        <li>Reliability: Data split into <em>Packets</em>, checked by <em>TCP/IP</em>.</li>
+      </ol>
+    </section>
+
+    <hr>
+    <section id="ip">
+      <h2>2. IP Addresses</h2>
+      <h3>IPv4</h3>
+      <ul>
+        <li>32-bit address, e.g. <code>172.217.16.142</code></li>
+        <li>≈ 4.3 billion addresses → shortage caused public/private split</li>
+      </ul>
+
+      <h3>Public vs Private</h3>
+      <ul>
+        <li><b>Public:</b> Globally unique, assigned by ISP</li>
+        <li><b>Private:</b> For LAN use, e.g. <code>192.168.x.x</code></li>
+        <li>Common ranges: <code>10.x.x.x</code>, <code>172.16–31.x.x</code>, <code>192.168.x.x</code></li>
+      </ul>
+
+      <h3>IPv6</h3>
+      <ul>
+        <li>128-bit, written in hex groups</li>
+        <li>Example: <code>2001:0db8:85a3::8a2e:0370:7334</code></li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="packets">
+      <h2>3. Packets & Protocols</h2>
+      <p><strong>Packet</strong> = data envelope containing:</p>
+      <ul>
+        <li>Payload (actual data)</li>
+        <li>Source & Destination IP</li>
+        <li>Sequence number</li>
+      </ul>
+      <p><strong>TCP/IP:</strong> Ensures reliable & ordered delivery with checksums + retries.</p>
+    </section>
+
+    <hr>
+
+    <section id="mac">
+      <h2>4. MAC Address</h2>
+      <p>Unique hardware ID (48-bit) burned into devices.</p>
+      <p><b>Formats:</b></p>
+      <ul>
+        <li><code>3C:22:FB:A3:B4:C5</code> (colon)</li>
+        <li><code>3C-22-FB-A3-B4-C5</code> (hyphen)</li>
+        <li><code>3c22.fba3.b4c5</code> (period)</li>
+      </ul>
+      <p><b>Find it:</b></p>
+      <ul>
+        <li>Windows: <code>ipconfig /all</code> or <code>getmac /v</code></li>
+        <li>macOS/Linux: <code>ifconfig</code></li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="ports">
+      <h2>5. Port Numbers</h2>
+      <p>Range: <b>0–65535</b></p>
+      <ol>
+        <li><b>0–1023:</b> Well-known (HTTP 80, HTTPS 443, SSH 22)</li>
+        <li><b>1024–49151:</b> Registered (apps, dev ports like 3000)</li>
+        <li><b>49152–65535:</b> Dynamic/Ephemeral (temporary client ports)</li>
+      </ol>
+      <p><b>Common:</b> 80 (HTTP), 443 (HTTPS), 22 (SSH), 3000 (Node/React), 27017 (MongoDB)</p>
+    </section>
+
+    <hr>
+
+    <section id="dns">
+      <h2>6. DNS Flow</h2>
+      <ol>
+        <li>Check cache (browser → OS → router)</li>
+        <li>Ask resolver (ISP / public like 8.8.8.8)</li>
+        <li>Resolver queries hierarchy:
+          <ul>
+            <li>Root → TLD (.com, .org, etc.)</li>
+            <li>TLD → authoritative server</li>
+            <li>Authoritative → final IP</li>
+          </ul>
+        </li>
+        <li>Resolver caches result</li>
+        <li>Browser connects to IP + port (e.g. 443 for HTTPS)</li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <section id="tldr">
+      <h2>7. TL;DR (Quick Recap)</h2>
+      <ul>
+        <li>Switch → connects devices in LAN</li>
+        <li>Router → connects networks</li>
+        <li>IP → digital address</li>
+        <li>MAC → hardware ID</li>
+        <li>Packets + TCP/IP → reliable data transfer</li>
+        <li>DNS → domain name → IP</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer align="center">
+    <hr>
+
+    <img src="img1.png" alt="Internet Diagram" width="800">
+       <p> Notes prepared for Web Development Course — Lecture 1</p>
+    <p><a href="#top"> Back to Top</a></p>
+    <br>
+  </footer>
+
+</body>
+</html>

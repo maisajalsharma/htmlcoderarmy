@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 5 - Forms in HTML</title>
+</head>
+<body>
+
+  <header align="center">
+    <h1> Day 5: Forms in HTML</h1>
+    <p>Collecting and Submitting User Information</p>
+    <hr>
+  </header>
+
+  <section align="center">
+    <h2> Lesson Video</h2>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/a4j9R_DvZ8M?si=BmSHYuAsN_L9SIyv"
+      frameborder="1" allowfullscreen>
+    </iframe>
+    <hr>
+  </section>
+
+  <main id="notes">
+
+    <h2>1️. Why Forms?</h2>
+    <p>
+      Forms make the web interactive. Without them, no login, search, comments, or shopping carts would work.
+      A form:
+    </p>
+    <ul>
+      <li>Displays fields (text, checkboxes, dropdowns)</li>
+      <li>Packages data neatly</li>
+      <li>Sends it to a server</li>
+    </ul>
+    <hr>
+
+    <h2>2️. Input & Label</h2>
+    <pre>
+&lt;form&gt;
+  &lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+  &lt;input type="text" id="firstName" name="firstName"&gt;
+&lt;/form&gt;
+    </pre>
+    <p> <b>id</b> links input with label.  
+        <b>name</b> is the key sent to the server.</p>
+    <hr>
+
+    <h2>3️. Submit Button</h2>
+    <pre>
+&lt;button type="submit"&gt;
+  &lt;strong&gt;Submit&lt;/strong&gt; Form
+&lt;/button&gt;
+    </pre>
+    <p>Better than <code>&lt;input type="submit"&gt;</code> because you can style and add HTML inside.</p>
+    <hr>
+
+    <h2>4️. Radio Buttons (Select One)</h2>
+    <pre>
+&lt;label&gt;T-Shirt Size:&lt;/label&gt;
+&lt;input type="radio" id="s" name="shirtSize" value="S"&gt;
+&lt;label for="s"&gt;Small&lt;/label&gt;
+&lt;input type="radio" id="m" name="shirtSize" value="M"&gt;
+&lt;label for="m"&gt;Medium&lt;/label&gt;
+    </pre>
+    <p> Same <b>name</b> = one group. Only one can be selected.</p>
+    <hr>
+
+    <h2>5️. Checkboxes (Select Many)</h2>
+    <pre>
+&lt;label&gt;Pizza Toppings:&lt;/label&gt;
+&lt;input type="checkbox" id="pep" name="toppings" value="pepperoni"&gt;
+&lt;label for="pep"&gt;Pepperoni&lt;/label&gt;
+&lt;input type="checkbox" id="mush" name="toppings" value="mushrooms"&gt;
+&lt;label for="mush"&gt;Mushrooms&lt;/label&gt;
+    </pre>
+    <p> Multiple can be chosen. All share the same <b>name</b>.</p>
+    <hr>
+
+    <h2>6️. Textarea</h2>
+    <pre>
+&lt;label for="comments"&gt;Special Instructions:&lt;/label&gt;
+&lt;textarea id="comments" name="comments" rows="4" cols="40"&gt;&lt;/textarea&gt;
+    </pre>
+    <p> Good for long text like addresses or comments.</p>
+    <hr>
+
+    <h2>7️. Dropdown</h2>
+    <pre>
+&lt;label for="country"&gt;Country:&lt;/label&gt;
+&lt;select id="country" name="country"&gt;
+  &lt;option value=""&gt;--Choose--&lt;/option&gt;
+  &lt;option value="in"&gt;India&lt;/option&gt;
+  &lt;option value="us"&gt;USA&lt;/option&gt;
+&lt;/select&gt;
+    </pre>
+    <p>Compact way to choose from many options.</p>
+    <hr>
+
+    <h2>8️. Special Inputs (HTML5)</h2>
+    <pre>
+Password: &lt;input type="password" name="pass"&gt;
+Age: &lt;input type="number" min="18" max="99"&gt;
+DOB: &lt;input type="date" name="dob"&gt;
+Color: &lt;input type="color" name="favColor"&gt;
+File: &lt;input type="file" name="upload"&gt;
+    </pre>
+    <p> Smarter fields with built-in validation.</p>
+    <hr>
+
+  </main>
+
+  <footer align="center">
+    <img src="d5.scg">
+    <br>
+    <p>2025 Full HTML Course | Day 4 | ❤️ by Coder Army</p>
+  </footer>
+
+</body>
+</html>

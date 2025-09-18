@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 3 - File Paths & Boilerplate</title>
+</head>
+<body>
+
+  <header align="center">
+    <h1> Day 3: File Path & Boilerplate</h1>
+    <p>Understanding File Paths, Boilerplate, and Multipage Websites</p>
+    <hr>
+  </header>
+
+  <section align="center">
+    <h2>🎥 Lesson Video</h2>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/k78lNSAB8VY?si=IAZBQYcbBoZv34ko"
+      frameborder="1" allowfullscreen>
+    </iframe>
+    <p><a href="#notes">Go to Notes</a></p>
+    <hr>
+  </section>
+
+  <main id="notes">
+
+   
+    <h2>1️. File Path System</h2>
+    <p>
+      A <b>file path</b> tells the browser where to find your files (HTML, CSS, images, etc.).
+      Without correct paths, files won’t load. There are two main types:
+    </p>
+
+    <h3>Relative Paths (for your own project files)</h3>
+    <p>Relative paths are based on the location of your HTML file.</p>
+
+    <ul>
+      <li>
+        <b>Same folder:</b> If <code>about.html</code> is in the same folder as your main file:  
+        <code>&lt;a href="about.html"&gt;About&lt;/a&gt;</code>  
+        This opens <i>about.html</i> in the same folder.
+      </li>
+      <li>
+        <b>Sub-folder:</b> If your image is inside an <code>images</code> folder:  
+        <code>&lt;img src="images/logo.png" alt="Logo"&gt;</code>  
+         This loads <i>logo.png</i> from the <i>images</i> folder.
+      </li>
+      <li>
+        <b>Parent folder:</b> If the image is one folder above your HTML file:  
+        <code>&lt;img src="../logo.png" alt="Logo"&gt;</code>  
+         <code>..</code> means “go up one folder”.
+      </li>
+    </ul>
+
+    <h3>Absolute Paths (external resources)</h3>
+    <p>
+      Absolute paths give the <b>full web address (URL)</b>. Use them only for external websites/resources.
+    </p>
+    <p>Example:</p>
+    <code>&lt;a href="https://google.com"&gt;Google&lt;/a&gt;</code><br>
+    <code>&lt;img src="https://upload.wikimedia.org/.../html5.svg" alt="HTML5"&gt;</code>
+
+    <p><b>Rule:</b> Use relative paths for your own project, absolute paths for external links.</p>
+    <hr>
+
+
+
+    <h2>2️. HTML Boilerplate</h2>
+    <p>
+      The <b>HTML boilerplate</b> is the basic structure every webpage starts with.  
+      It ensures the page runs properly in all browsers.
+    </p>
+
+    <pre>
+&lt;!DOCTYPE html&gt;  ← Tells the browser this is HTML5
+&lt;html lang="en"&gt; ← Root element, language is English
+&lt;head&gt;           ← Metadata (info about the page, not shown directly)
+  &lt;meta charset="UTF-8"&gt; ← Supports all characters (English, Hindi, Emoji )
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; ← Makes page mobile-friendly
+  &lt;title&gt;My First Page&lt;/title&gt; ← Title shown in browser tab
+&lt;/head&gt;
+
+&lt;body&gt;
+  Content visible to users goes here
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <p>✔ Prevents quirks mode (old browser errors)<br>
+       ✔ Ensures proper text encoding (UTF-8)<br>
+       ✔ Mobile responsive by default<br>
+       ✔ SEO & accessibility ready</p>
+    <hr>
+
+
+   
+    <h2>3️. Multipage Websites</h2>
+    <p>
+      Websites usually have multiple pages like Home, About, Contact.  
+      Each page is a separate HTML file, linked with <code>&lt;a&gt;</code> tags.
+    </p>
+
+    <p>Example folder structure:</p>
+    <pre>
+project/
+ ├── index.html   ← Home Page
+ ├── about.html   ← About Page
+ └── contact.html ← Contact Page
+    </pre>
+
+    <p>Navigation links:</p>
+    <pre>
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+    </pre>
+
+    <p><b>Tip:</b> Keep <i>header</i> and <i>footer</i> same across all pages for consistency.</p>
+    <hr>
+
+
+    
+    <h2>4️. Important Tags</h2>
+    <p>
+      These are frequently used structural tags in HTML:
+    </p>
+    <ul>
+      <li><b>&lt;div&gt;</b> → Groups elements into blocks. (Block-level container)</li>
+      <li><b>&lt;span&gt;</b> → Highlights text inline. (Inline container)</li>
+      <li><b>&lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</b> → Define page structure (semantic HTML).</li>
+      <li><b>id</b> → Unique identifier for one element (use once).  
+          <b>class</b> → Reusable label for multiple elements.</li>
+    </ul>
+
+    <p>Example:</p>
+    <pre>
+&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;div class="content"&gt;
+    &lt;p&gt;This is my paragraph with a &lt;span style="color:red"&gt;highlighted word&lt;/span&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p id="copyright"&gt;© 2025 My Website&lt;/p&gt;
+&lt;/footer&gt;
+    </pre>
+
+  </main>
+
+  <footer align="center">
+    <hr>
+
+    <img src="d4.svg" alt="Internet Diagram" width="800">
+        <p>2025 Full HTML Course | Day 3 | ❤️ by Coder Army</p>
+        <br>
+  </footer>
+
+</body>
+</html>
